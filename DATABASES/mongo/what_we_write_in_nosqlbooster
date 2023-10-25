@@ -1,0 +1,14 @@
+use sirius    # создаст бд сириус
+
+db.createCollection("employees") #  создаст коллекцию с работниками
+
+db.employees.insertMany([
+    name: 'Petr',
+    passport: {series: 1232, number: 1234567}...
+])
+
+db.employees.insertOne(...)
+
+db.employees.find()
+db.employees.find({name: 'Petr'})
+db.employees.find({$or: {name: 'Petr'}, {name: 'Karl'}})
